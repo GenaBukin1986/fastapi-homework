@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+aiosqlite
+greenlet
+pytest
+httpx
