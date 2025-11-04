@@ -1,4 +1,5 @@
 from fastapi.testclient import TestClient
+
 from app import app
 
 client = TestClient(app)
@@ -11,8 +12,8 @@ def test_create_recipe():
             "name": "Омлет",
             "cooking_time": 10,
             "ingredients": {"яйцо": 2, "молоко": 50},
-            "description": "Простой омлет на завтрак."
-        }
+            "description": "Простой омлет на завтрак.",
+        },
     )
 
     assert response.status_code == 201
@@ -31,8 +32,8 @@ def test_get_recipes():
             "name": "Блины",
             "cooking_time": 20,
             "ingredients": {"мука": 200, "яйцо": 1},
-            "description": "Классические блины."
-        }
+            "description": "Классические блины.",
+        },
     )
 
     response = client.get("/recipes")
@@ -52,8 +53,8 @@ def test_get_recipe_increments_views():
             "name": "Тестовый рецепт",
             "cooking_time": 5,
             "ingredients": {"вода": 100},
-            "description": "Тест."
-        }
+            "description": "Тест.",
+        },
     )
     recipe_id = create_response.json()["id"]
 

@@ -1,6 +1,7 @@
+from sqlalchemy import desc
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
-from sqlalchemy import desc
+
 from models.recipe import Recipe
 from schemas.recipe import RecipeCreate
 
@@ -27,7 +28,7 @@ async def create_recipe(db: AsyncSession, recipe: RecipeCreate) -> Recipe:
         cooking_time=recipe.cooking_time,
         ingredients=recipe.ingredients,
         description=recipe.description,
-        views=0
+        views=0,
     )
 
     db.add(db_recipe)
