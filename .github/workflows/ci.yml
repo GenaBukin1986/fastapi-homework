@@ -33,7 +33,7 @@ jobs:
         run: flake8 .
 
       - name: Type check with mypy
-        run: mypy .
+        run: mypy --explicit-package-bases .
 
       - name: Run tests with pytest
         run: pytest
