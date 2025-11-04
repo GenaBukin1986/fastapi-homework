@@ -5,3 +5,9 @@ aiosqlite
 greenlet
 pytest
 httpx
+
+# Линтеры и анализаторы
+flake8
+black
+isort
+mypy
