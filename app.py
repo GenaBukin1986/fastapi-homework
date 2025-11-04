@@ -3,14 +3,8 @@ from contextlib import asynccontextmanager
 from fastapi import Depends, FastAPI, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from crud.recipe import (
-    create_recipe,
-    delete_recipe,
-    get_recipe,
-    get_recipes,
-    increment_views,
-    update_recipe,
-)
+from crud.recipe import (create_recipe, delete_recipe, get_recipe, get_recipes,
+                         increment_views, update_recipe)
 from database import Base, engine, get_session
 from schemas.recipe import RecipeCreate, RecipeResponse, RecipeUpdate
 
