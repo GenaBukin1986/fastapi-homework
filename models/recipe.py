@@ -1,7 +1,6 @@
-# models/recipe.py
 from typing import Any, Dict
 
-from sqlalchemy import JSON, Column, Integer, String, Text
+from sqlalchemy import JSON, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from database import Base
